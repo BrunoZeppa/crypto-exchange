@@ -12,7 +12,6 @@ const { globalErrorHandler } = require("./controllers/error.controller");
 const { usersRouter } = require("./Routes/users.routes");
 const { productsRouter } = require("./Routes/products.routes");
 const { cartsRouter } = require("./Routes/carts.routes");
-const compression = require("compression");
 
 const app = express();
 
