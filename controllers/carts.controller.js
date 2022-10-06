@@ -43,7 +43,7 @@ const addProductToCart = catchAsync(async (req, res, next) => {
     } else if (productInCart.status === "active") {
       return next(new AppError("this product is already in your cart", 400));
     } else if (productInCart.status === "removed") {
-      return await productInCart.update({ status: "active", quantity });
+      await productInCart.update({ status: "active", quantity });
     }
   }
   res.status(200).json({
